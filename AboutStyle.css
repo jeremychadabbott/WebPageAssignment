@@ -1,0 +1,149 @@
+/* Reset some basic elements */
+body, h2, h3, p, ul, form, label {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F7F7F7; /* Cloudy Gray */
+    color: #014038; /* Canopy Green */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #014038; /* Canopy Green */
+    color: #F7F7F7; /* Cloudy Gray */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #F7F7F7; /* Cloudy Gray */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up {
+    background-color: #F0C06D; /* Sunlit Petal */
+    color: #014038; /* Canopy Green */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    background-color: #014038; /* Canopy Green */
+    color: #F7F7F7; /* Cloudy Gray */
+}
+
+/* About Us Section */
+.about-us {
+    padding: 2rem;
+    background-color: #F7F7F7; /* Cloudy Gray */
+}
+
+.about-us h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #014038; /* Canopy Green */
+}
+
+.about-us p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Feedback Form Section */
+.feedback-form {
+    padding: 2rem;
+    background-color: #E0D2BD; /* Rivulet Beige */
+    border-top: 2px solid #014038; /* Canopy Green */
+}
+
+.feedback-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #014038; /* Canopy Green */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #014038; /* Canopy Green */
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #014038; /* Canopy Green */
+    border: none;
+    cursor: pointer;
+    color: #F7F7F7; /* Cloudy Gray */
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #F0C06D; /* Sunlit Petal */
+}
+
+/* Footer */
+footer {
+    background-color: #014038; /* Canopy Green */
+    color: #F7F7F7; /* Cloudy Gray */
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #F7F7F7; /* Cloudy Gray */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: #F7F7F7; /* Cloudy Gray */
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
