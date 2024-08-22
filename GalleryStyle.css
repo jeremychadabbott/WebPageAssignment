@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #014038;
+  padding: 1rem;
+  color: #F7F7F7;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav .nav-links li {
+  display: inline;
+}
+
+nav .nav-links a {
+  color: #F7F7F7;
+  text-decoration: none;
+}
+
+nav .sign-up {
+  background-color: #F0C06D;
+  color: #014038;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.client-highlights {
+  background-color: #BDD4DA;
+  padding: 2rem;
+  text-align: center;
+}
+
+.shopping-promos, .image-gallery, .categories-perks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.promo {
+  position: relative;
+}
+
+.promo img {
+  width: 325px;
+  height: 300px;
+}
+
+.promo .promo-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #AC1724;
+}
+
+.image-gallery.large div img {
+  width: 650px;
+  height: 612px;
+}
+
+.image-gallery.small div img {
+  width: 325px;
+  height: 300px;
+}
+
+.categories-perks {
+  flex-direction: row;
+}
+
+.categories, .perks {
+  flex: 1;
+  padding: 1rem;
+  background-color: #E0D2BD;
+  text-align: center;
+}
+
+.categories h3, .perks h3 {
+  font-size: 1.5rem;
+  color: #014038;
+}
+
+.categories ul, .perks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categories ul li, .perks ul li {
+  margin: 0.5rem 0;
+}
+
+footer {
+  background-color: #014038;
+  color: #F7F7F7;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer .footer-links, .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .footer-links a, footer .social-media a {
+  color: #F7F7F7;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0;
+}
