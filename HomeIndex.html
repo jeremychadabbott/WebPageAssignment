@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Valley Nursery - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (consistent across all pages) -->
+    <header>
+        <nav>
+            <div class="logo">Bloom Valley Nursery</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <button class="sign-up">Sign Up</button>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h1>Our Products</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="Client1_AloePlant.png" alt="Aloe Plant">
+                <button class="add-to-cart" onclick="addToCart('Aloe Plant', 9.99)">Add to Cart - $9.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_AppleTree.png" alt="Apple Tree">
+                <button class="add-to-cart" onclick="addToCart('Apple Tree', 29.99)">Add to Cart - $29.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_BirchTree.png" alt="Birch Tree">
+                <button class="add-to-cart" onclick="addToCart('Birch Tree', 39.99)">Add to Cart - $39.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_BirdHouse.png" alt="Bird House">
+                <button class="add-to-cart" onclick="addToCart('Bird House', 15.99)">Add to Cart - $15.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_MapleTree.png" alt="Maple Tree">
+                <button class="add-to-cart" onclick="addToCart('Maple Tree', 49.99)">Add to Cart - $49.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_PottingSoil.png" alt="Potting Soil">
+                <button class="add-to-cart" onclick="addToCart('Potting Soil', 7.99)">Add to Cart - $7.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_SpiderPlant.png" alt="Spider Plant">
+                <button class="add-to-cart" onclick="addToCart('Spider Plant', 9.99)">Add to Cart - $9.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_StringofPearls.png" alt="String of Pearls">
+                <button class="add-to-cart" onclick="addToCart('String of Pearls', 12.99)">Add to Cart - $12.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_WateringCan.png" alt="Watering Can">
+                <button class="add-to-cart" onclick="addToCart('Watering Can', 19.99)">Add to Cart - $19.99</button>
+            </div>
+        </div>
+        <button class="view-cart" onclick="openCart()">View Shopping Cart</button>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+            <button class="process-order" onclick="processOrder()">Process Order</button>
+        </div>
+    </div>
+
+    <!-- Footer (consistent across all pages) -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; Bloom Valley Nursery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
