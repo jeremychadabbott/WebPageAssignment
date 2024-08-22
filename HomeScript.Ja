@@ -1,0 +1,47 @@
+let cart = [];
+
+function addToCart(item, price) {
+    cart.push({ item: item, price: price });
+    alert(`${item} added to cart!`);
+}
+
+function openCart() {
+    let cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = '';
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cart.forEach((product, index) => {
+            cartItems.innerHTML += `<p>${product.item} - $${product.price.toFixed(2)}</p>`;
+        });
+    }
+    document.getElementById('cartModal').style.display = "block";
+}
+
+function closeCart() {
+    document.getElementById('cartModal').style.display = "none";
+}
+
+function clearCart() {
+    cart = [];
+    alert("Cart has been cleared!");
+    closeCart();
+}
+
+function processOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+    } else {
+        alert("Thank you for your order!");
+        cart = [];
+        closeCart();
+    }
+}
+
+// Close the cart if the user clicks outside of the modal
+window.onclick = function(event) {
+    let modal = document.getElementById('cartModal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
