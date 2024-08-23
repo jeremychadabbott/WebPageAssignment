@@ -1,109 +1,58 @@
+Skip to content
+Commands
+Search
+
 <!DOCTYPE html>
-<html lang="en">
+            <div class="grid-item">
+                <img src="Client1_SpiderPlant.png" alt="Spider Plant">
+                <button class="add-to-cart" onclick="addToCart('Spider Plant', 9.99)" aria-label="Add Spider Plant to Cart for $9.99">Add to Cart - $9.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_StringofPearls.png" alt="String of Pearls">
+                <button class="add-to-cart" onclick="addToCart('String of Pearls', 12.99)" aria-label="Add String of Pearls to Cart for $12.99">Add to Cart - $12.99</button>
+            </div>
+            <div class="grid-item">
+                <img src="Client1_WateringCan.png" alt="Watering Can">
+                <button class="add-to-cart" onclick="addToCart('Watering Can', 19.99)" aria-label="Add Watering Can to Cart for $19.99">Add to Cart - $19.99</button>
+            </div>
+        </div>
+        <button class="view-cart" onclick="openCart()" aria-label="View Shopping Cart">View Shopping Cart</button>
+    </section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bloom Valley Nursery - Homepage</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">Bloom Valley Nursery</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Custom</a></li>
-    </ul>
-    <button class="sign-up">Sign Up</button>
-  </nav>
-
-  <!-- Client Highlights -->
-  <section class="client-highlights">
-    <h2>Client Highlights</h2>
-    <p>Bloom Valley Nursery specializes in providing high-quality plants, trees, and gardening supplies with a focus on sustainability and community engagement. Explore our diverse selection and enjoy personalized service from our knowledgeable staff.</p>
-  </section>
-
-  <!-- Shopping Promos -->
-  <section class="shopping-promos">
-    <div class="promo">
-      <img src="Client1_AloePlant.png" alt="Shopping Promo 1">
-      <div class="promo-text">50% OFF!</div>
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal" role="dialog" aria-labelledby="cartModalHeading" aria-hidden="true">
+        <div class="cart-content">
+            <span class="close" onclick="closeCart()" aria-label="Close Cart">&times;</span>
+            <h2 id="cartModalHeading">Your Cart</h2>
+            <div id="cartItems" aria-live="polite"></div>
+            <button class="clear-cart" onclick="clearCart()" aria-label="Clear Shopping Cart">Clear Cart</button>
+            <button class="process-order" onclick="processOrder()" aria-label="Process Your Order">Process Order</button>
+        </div>
     </div>
-    <div class="promo">
-      <img src="Client1_AppleTree.png" alt="Shopping Promo 2">
-      <div class="promo-text">50% OFF!</div>
-    </div>
-    <div class="promo">
-      <img src="Client1_BirchTree.png" alt="Shopping Promo 3">
-      <div class="promo-text">50% OFF!</div>
-    </div>
-    <div class="promo">
-      <img src="Client1_SpiderPlant.png" alt="Shopping Promo 4">
-      <div class="promo-text">50% OFF!</div>
-    </div>
-  </section>
 
-  <!-- Image Galleries -->
-  <section class="image-gallery large">
-    <div><img src="Client1_MapleTree.png" alt="Image Gallery Large 1"></div>
-    <div><img src="Client1_BirdHouse.png" alt="Image Gallery Large 2"></div>
-  </section>
+    <!-- Footer (with Subscribe Feature) -->
+    <footer aria-label="Footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html" aria-current="page">Gallery</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" id="subscribeEmail" placeholder="Enter your email" aria-label="Email address for newsletter">
+            <button id="subscribeButton" aria-label="Subscribe to Newsletter">Subscribe</button>
+        </div>
+        <p>&copy; Bloom Valley Nursery</p>
+    </footer>
 
-  <section class="image-gallery small">
-    <div><img src="Client1_PottingSoil.png" alt="Image Gallery Small 1"></div>
-    <div><img src="Client1_StringOfPearls.png" alt="Image Gallery Small 2"></div>
-    <div><img src="Client1_WateringCan.png" alt="Image Gallery Small 3"></div>
-    <div><img src="Client1_AloePlant.png" alt="Image Gallery Small 4"></div>
-  </section>
-
-  <!-- Categories and Shopping Perks -->
-  <section class="categories-perks">
-    <div class="categories">
-      <h3>Product Categories</h3>
-      <ul>
-        <li>Indoor Plants</li>
-        <li>Outdoor Shrubs</li>
-        <li>Flowering Trees</li>
-        <li>Succulents & Cacti</li>
-        <li>Gardening Tools</li>
-        <li>Organic Soil & Fertilizers</li>
-      </ul>
-    </div>
-    <div class="perks">
-      <h3>Shopping Perks</h3>
-      <ul>
-        <li>Free Local Delivery</li>
-        <li>Loyalty Program</li>
-        <li>Plant Care Guides</li>
-        <li>Sustainability Discount</li>
-        <li>Gift Wrapping Services</li>
-        <li>Seasonal Promotions</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">Gallery</a>
-      <a href="#">About</a>
-      <a href="#">Custom</a>
-    </div>
-    <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </div>
-    <p>&copy; 2024 Bloom Valley Nursery</p>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+Sophia Test, Gallery - Replit
