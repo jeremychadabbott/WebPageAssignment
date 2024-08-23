@@ -1,96 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Valley Nursery - Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Valley Nursery - Homepage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header (consistent across all pages) -->
-    <header>
-        <nav>
-            <div class="logo">Bloom Valley Nursery</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-            <button class="sign-up">Sign Up</button>
-        </nav>
-    </header>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h1>Our Products</h1>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="Client1_AloePlant.png" alt="Aloe Plant">
-                <button class="add-to-cart" onclick="addToCart('Aloe Plant', 9.99)">Add to Cart - $9.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_AppleTree.png" alt="Apple Tree">
-                <button class="add-to-cart" onclick="addToCart('Apple Tree', 29.99)">Add to Cart - $29.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_BirchTree.png" alt="Birch Tree">
-                <button class="add-to-cart" onclick="addToCart('Birch Tree', 39.99)">Add to Cart - $39.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_BirdHouse.png" alt="Bird House">
-                <button class="add-to-cart" onclick="addToCart('Bird House', 15.99)">Add to Cart - $15.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_MapleTree.png" alt="Maple Tree">
-                <button class="add-to-cart" onclick="addToCart('Maple Tree', 49.99)">Add to Cart - $49.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_PottingSoil.png" alt="Potting Soil">
-                <button class="add-to-cart" onclick="addToCart('Potting Soil', 7.99)">Add to Cart - $7.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_SpiderPlant.png" alt="Spider Plant">
-                <button class="add-to-cart" onclick="addToCart('Spider Plant', 9.99)">Add to Cart - $9.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_StringofPearls.png" alt="String of Pearls">
-                <button class="add-to-cart" onclick="addToCart('String of Pearls', 12.99)">Add to Cart - $12.99</button>
-            </div>
-            <div class="grid-item">
-                <img src="Client1_WateringCan.png" alt="Watering Can">
-                <button class="add-to-cart" onclick="addToCart('Watering Can', 19.99)">Add to Cart - $19.99</button>
-            </div>
-        </div>
-        <button class="view-cart" onclick="openCart()">View Shopping Cart</button>
-    </section>
+  <!-- Navigation Bar -->
+  <nav aria-label="Main Navigation">
+    <div class="logo">Bloom Valley Nursery</div>
+    <ul class="nav-links">
+      <li><a href="#" aria-current="page">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Custom</a></li>
+    </ul>
+    <button class="sign-up" aria-label="Sign Up for Newsletter">Sign Up</button>
+  </nav>
 
-    <!-- Shopping Cart Modal -->
-    <div id="cartModal" class="cart-modal">
-        <div class="cart-content">
-            <span class="close" onclick="closeCart()">&times;</span>
-            <h2>Your Cart</h2>
-            <div id="cartItems"></div>
-            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
-            <button class="process-order" onclick="processOrder()">Process Order</button>
-        </div>
+  <!-- Client Highlights -->
+  <section class="client-highlights" aria-label="Client Highlights">
+    <h2>Client Highlights</h2>
+    <p>Bloom Valley Nursery specializes in providing high-quality plants, trees, and gardening supplies with a focus on sustainability and community engagement. Explore our diverse selection and enjoy personalized service from our knowledgeable staff.</p>
+  </section>
+
+  <!-- Shopping Promos -->
+  <section class="shopping-promos" aria-label="Shopping Promotions">
+    <div class="promo" aria-label="Aloe Plant Promotion">
+      <img src="Client1_AloePlant.png" alt="Aloe Plant">
+      <div class="promo-text">50% OFF!</div>
     </div>
+    <div class="promo" aria-label="Apple Tree Promotion">
+      <img src="Client1_AppleTree.png" alt="Apple Tree">
+      <div class="promo-text">50% OFF!</div>
+    </div>
+    <div class="promo" aria-label="Birch Tree Promotion">
+      <img src="Client1_BirchTree.png" alt="Birch Tree">
+      <div class="promo-text">50% OFF!</div>
+    </div>
+    <div class="promo" aria-label="Spider Plant Promotion">
+      <img src="Client1_SpiderPlant.png" alt="Spider Plant">
+      <div class="promo-text">50% OFF!</div>
+    </div>
+  </section>
 
-    <!-- Footer (consistent across all pages) -->
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About Us</a>
-        </div>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p>&copy; Bloom Valley Nursery</p>
-    </footer>
+  <!-- Image Galleries -->
+  <section class="image-gallery large" aria-label="Large Image Gallery">
+    <div><img src="Client1_MapleTree.png" alt="Maple Tree"></div>
+    <div><img src="Client1_BirdHouse.png" alt="Bird House"></div>
+  </section>
 
-    <script src="script.js"></script>
+  <section class="image-gallery small" aria-label="Small Image Gallery">
+    <div><img src="Client1_PottingSoil.png" alt="Potting Soil"></div>
+    <div><img src="Client1_StringOfPearls.png" alt="String of Pearls Plant"></div>
+    <div><img src="Client1_WateringCan.png" alt="Watering Can"></div>
+    <div><img src="Client1_AloePlant.png" alt="Aloe Plant"></div>
+  </section>
+
+  <!-- Categories and Shopping Perks -->
+  <section class="categories-perks" aria-labelledby="categories-perks-heading">
+    <h2 id="categories-perks-heading" class="sr-only">Categories and Shopping Perks</h2>
+    <div class="categories">
+      <h3>Product Categories</h3>
+      <ul>
+        <li>Indoor Plants</li>
+        <li>Outdoor Shrubs</li>
+        <li>Flowering Trees</li>
+        <li>Succulents & Cacti</li>
+        <li>Gardening Tools</li>
+        <li>Organic Soil & Fertilizers</li>
+      </ul>
+    </div>
+    <div class="perks">
+      <h3>Shopping Perks</h3>
+      <ul>
+        <li>Free Local Delivery</li>
+        <li>Loyalty Program</li>
+        <li>Plant Care Guides</li>
+        <li>Sustainability Discount</li>
+        <li>Gift Wrapping Services</li>
+        <li>Seasonal Promotions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer aria-label="Footer">
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+      <a href="#">Custom</a>
+    </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div class="subscribe">
+      <input type="email" id="subscribeEmail" placeholder="Enter your email" aria-label="Email address for newsletter">
+      <button id="subscribeButton" aria-label="Subscribe to Newsletter">Subscribe</button>
+    </div>
+    <p>&copy; Bloom Valley Nursery</p>
+  </footer>
+
+  <!-- Ensure this script tag is within the body and after the footer -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>
