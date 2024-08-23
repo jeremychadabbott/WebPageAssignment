@@ -1,135 +1,177 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #014038;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    color: white;
+    text-align: left;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #014038;
-  padding: 1rem;
-  color: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav .nav-links {
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
+.nav-links li {
+    margin-right: 20px;
 }
 
-nav .nav-links li {
-  display: inline;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-nav .nav-links a {
-  color: #F7F7F7;
-  text-decoration: none;
+.sign-up {
+    background-color: #96BAA0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-nav .sign-up {
-  background-color: #F0C06D;
-  color: #014038;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+.sign-up:hover {
+    background-color: #014038;
 }
 
-.client-highlights {
-  background-color: #BDD4DA;
-  padding: 2rem;
-  text-align: center;
+/* Gallery Section */
+.gallery {
+    padding: 20px;
+    text-align: center;
 }
 
-.shopping-promos, .image-gallery, .categories-perks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-  gap: 1rem;
+.gallery h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.promo {
-  position: relative;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
 }
 
-.promo img {
-  width: 325px;
-  height: 300px;
+.grid-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.promo .promo-text {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 5px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #AC1724;
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.image-gallery.large div img {
-  width: 650px;
-  height: 612px;
+.add-to-cart {
+    background-color: #014038;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.image-gallery.small div img {
-  width: 325px;
-  height: 300px;
+.add-to-cart:hover {
+    background-color: #96BAA0;
 }
 
-.categories-perks {
-  flex-direction: row;
+/* Cart Modal Styles */
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.categories, .perks {
-  flex: 1;
-  padding: 1rem;
-  background-color: #E0D2BD;
-  text-align: center;
+.cart-content {
+    background-color: #f9f9f9;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
 }
 
-.categories h3, .perks h3 {
-  font-size: 1.5rem;
-  color: #014038;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.categories ul, .perks ul {
-  list-style-type: none;
-  padding: 0;
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.categories ul li, .perks ul li {
-  margin: 0.5rem 0;
+.view-cart, .clear-cart, .process-order {
+    background-color: #014038;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
+.view-cart:hover, .clear-cart:hover, .process-order:hover {
+    background-color: #96BAA0;
+}
+
+/* Footer Styles */
 footer {
-  background-color: #014038;
-  color: #F7F7F7;
-  text-align: center;
-  padding: 1rem 0;
+    background-color: #014038;
+    padding: 20px;
+    color: white;
+    text-align: center;
 }
 
-footer .footer-links, .social-media {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.footer-links {
+    margin-bottom: 10px;
 }
 
-footer .footer-links a, footer .social-media a {
-  color: #F7F7F7;
-  text-decoration: none;
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
 }
 
-footer p {
-  margin: 0;
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
 }
